@@ -1,21 +1,26 @@
 <?php
 include "connect_db.php";
 
-if(isset($_POST['submit']))
-    $user_name = $_POST["user_name"];
+
+if(isset($_POST['submit'])){
+
+    $user_name = $_POST['user_name'];
     $email = $_POST['email'];
     $role = $_POST['role'];
+    $user_ID = $_POST['user_ID'];
 
-    $sql = "UPDATE `utilisateurx` SET `user_name`='$user_name',`email`='$email',`role`='$role' WHERE userID=$userID";
+    $sql = "UPDATE `utilisateurx`SET user_name='$user_name' , email='$email' , role='$role'  ";
 
     $result = mysqli_query($conn, $sql);
 
-/*    if($result) {
+
+   if($result) {
         header("location: index.php?msg=New record created successfully ");
     }
     else{
         echo "failed: " . mysqli_error($conn);
-    } */
+    }
+}
 ?>
 
 
@@ -33,48 +38,41 @@ if(isset($_POST['submit']))
 </head>
 <body>
 <nav class="navbar navbar-light justify-content-center fs-3 mb-5 " style="background-color: #00ff5573;">
-    PHP Complete CRUD Application  
+    PHP ADD NEW USER 
 </nav>
 
 <div class="container">
     <div class="text-center mb-4">
-        <h3>edit user details</h3>
-        <p class="text-muted">click update after changing any information </p>
+        <h3>Add New User</h3>
+        <p class="text-muted"> complete the form to add new user</p>
     </div>
-    <?php
-    $userID = $_GET['userID'];
-    $sql = "SELECT * FROM `utilisateurx` WHERE userID =$userID LIMIT 1";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
-    ?>
-
     <div class="container d-flex justify-content-center">
         <form action="" method="post" style="width:50vw; min-width: 300px">
             <div class="row">
                 <div class="col">
                     <label class="form-label">user_name </label>
                     <input type="text" class="form-control" name="user_name"
-                    value="<?php  echo $row ['user_name'] ?>">
+                    placeholder="khalid">
                 </div>
 
                 <div class="col">
                     <label class="form-label">email </label>
                     <input type="text" class="form-control" name="email"
-                    value="<?php  echo $row ['email'] ?>">
+                    placeholder="khalid@domaine.com">
                 </div>
             </div>
                 <div class="form-group mb-3"> 
                     <label> role :</label> &nbsp;
                     <input type="radio" class="form-check-input" name="role"
-                    id="user" value="user" <?php echo ($row['role']=='user')? "checked":""; ?>>
+                    id="user" value="user" >
                     <label for="user" class="form-input-label"> user</label>
                     &nbsp;
                     <input type="radio" class="form-check-input" name="role"
-                    id="admin" value="admin" <?php echo ($row['role']=='admin')? "checked":""; ?>> >
+                    id="admin" value="admin" >
                     <label for="admin" class="form-input-label"> admin</label>
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-success" name="submit">update</button>
+                    <button type="submit" class="btn btn-success" name="submit">Update</button>
                     <a href="index.php" class="btn btn-danger"> cancel</a>
                 </div>
         </form>

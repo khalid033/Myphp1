@@ -12,7 +12,7 @@
 </head>
 <body>
 <nav class="navbar navbar-light justify-content-center fs-3 mb-5 " style="background-color: #00ff5573;">
-    PHP Complete CRUD Application  
+    PHP CRUD PROJE  
 </nav>
 
 <div class="container">
@@ -25,63 +25,10 @@
       </div>';
     }
     ?>
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  ADD NEW
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">add new user</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <div class="container d-flex justify-content-center">
-        <form action="" method="post" style="width:50vw; min-width: 300px">
-            <div class="row">
-                <div class="col">
-                    <label class="form-label">user_name </label>
-                    <input type="text" class="form-control" name="user_name"
-                    placeholder="khalid">
-                </div>
-
-                <div class="col">
-                    <label class="form-label">email </label>
-                    <input type="text" class="form-control" name="email"
-                    placeholder="khalid@domaine.com">
-                </div>
-            </div>
-                <div class="form-group mb-3"> 
-                    <label> role :</label> &nbsp;
-                    <input type="radio" class="form-check-input" name="role"
-                    id="user" value="user" >
-                    <label for="user" class="form-input-label"> user</label>
-                    &nbsp;
-                    <input type="radio" class="form-check-input" name="role"
-                    id="admin" value="admin" >
-                    <label for="admin" class="form-input-label"> admin</label>
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-success" name="submit">save</button>
-                    <a href="index.php" class="btn btn-danger"> cancel</a>
-                </div>
-        </form>
-    </div>
-</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+    <a href="user.php" class="btn btn-dark mb-3">Add New</a>
 
 
-    <table class="table table-hover text-center mt-5">
+    <table class="table table-hover text-center">
   <thead class="table-dark">
     <tr>
       <th scope="col">userID</th>

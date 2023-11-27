@@ -1,9 +1,9 @@
 <?php
 include "connect_db.php";
 
-print_r($_POST);
 
-if(isset($_POST['submit']))
+if(isset($_POST['submit'])){
+
     $user_name = $_POST['user_name'];
     $email = $_POST['email'];
     $role = $_POST['role'];
@@ -12,12 +12,14 @@ if(isset($_POST['submit']))
 
     $result = mysqli_query($conn, $sql);
 
-/*    if($result) {
+
+   if($result) {
         header("location: index.php?msg=New record created successfully ");
     }
     else{
         echo "failed: " . mysqli_error($conn);
-    } */
+    }
+}
 ?>
 
 
@@ -35,7 +37,7 @@ if(isset($_POST['submit']))
 </head>
 <body>
 <nav class="navbar navbar-light justify-content-center fs-3 mb-5 " style="background-color: #00ff5573;">
-    PHP Complete CRUD Application  
+    PHP ADD NEW USER 
 </nav>
 
 <div class="container">
