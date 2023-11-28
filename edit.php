@@ -7,9 +7,9 @@ if(isset($_POST['submit'])){
     $user_name = $_POST['user_name'];
     $email = $_POST['email'];
     $role = $_POST['role'];
-    $user_ID = $_POST['user_ID'];
-
-    $sql = "UPDATE `utilisateurx`SET user_name='$user_name' , email='$email' , role='$role'  ";
+    $userID = $_GET['userID'];
+    
+    $sql = "UPDATE `utilisateurx`SET user_name='$user_name' , email='$email' , role='$role' WHERE userID=$userID ";
 
     $result = mysqli_query($conn, $sql);
 

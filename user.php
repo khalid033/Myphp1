@@ -7,7 +7,7 @@ if(isset($_POST['submit'])){
     $user_name = $_POST['user_name'];
     $email = $_POST['email'];
     $role = $_POST['role'];
-
+    
     $sql = "INSERT INTO `utilisateurx`(`userID`, `user_name`, `email`, `role`) VALUES (NULL,'$user_name','$email','$role')";
 
     $result = mysqli_query($conn, $sql);
