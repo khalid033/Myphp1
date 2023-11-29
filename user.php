@@ -45,6 +45,11 @@ if(isset($_POST['submit'])){
         <h3>Add New User</h3>
         <p class="text-muted"> complete the form to add new user</p>
     </div>
+    <div class="container d-flex justify-content-center m-1">
+        <a href="index.php" class="btn btn-primary mb-5 m-1"> USERS</a>
+        <a href="display1.php" class="btn btn-primary mb-5 m-1"> RESSOURCE</a>
+        <a href="displayca.php" class="btn btn-primary mb-5 m-1"> Category </a>
+    </div>
     <div class="container d-flex justify-content-center">
         <form action="" method="post" style="width:50vw; min-width: 300px">
             <div class="row">
